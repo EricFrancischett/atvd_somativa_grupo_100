@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img.mufin.png">
+    <title>Meu Site Exemplo</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a class="active" href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <body>
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a class="active" href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <script src="script/script.js"></script>
+        <div class="content">
+
+            <h2 class="titleTop">Dados de Contato</h2>
+
+            <p>JS lê os dados enviados via <b>GET</b> de um Form HTML</p>
+
+            <table class="tableCSS">
+                <tr>
+                    <th>Chave</th>
+                    <th>Valor</th>
+                </tr>
+                <script language=javascript>
+                    var params = new Array();
+                    params = getParameters();
+                    for (let [key, value] of Object.entries(params)) {
+                        document.write("<tr><th>" + key + "</th><td>" + value + "</td></tr>");
+                    }
+                </script>
+            </table>
+            <input type=button class="form-submit" value=" << Retornar" onclick="history.back()">
+    </body>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
