@@ -1,45 +1,79 @@
-function openModal(cupcake) {
-    var txt1 = document.getElementById("txt1");
-    var txt2 = document.getElementById("txt2");
-    var txt3 = document.getElementById("txt3");
-    switch (cupcake) {
-        case "CupFlavor1":
-            txt1.innerHTML = "Cookies And Cream";
-            txt2.innerHTML = "Creme de Negresco no bolo de chocolate."
-            txt3.innerHTML = "R$15,00";
-            break;
-        case "CupFlavor2":
-            txt1.innerHTML = "Red Velvet";
-            txt2.innerHTML = "Creme de linão no bolo de chocolate";
-            txt3.innerHTML = "R$15,00";
-            break;
-        case "CupFlavor3":
-            txt1.innerHTML = "Rainbow Vanilla";
-            txt2.innerHTML = "Creme de leite ninho no bolo de baunilha.";
-            txt3.innerHTML = "R$15,00";
-            break;
-        case "CupFlavor4":
-            txt1.innerHTML = "Mint Double Chocolate";
-            txt2.innerHTML = "Creme de hortelã no bolo de chocolate.";
-            txt3.innerHTML = "R$15,00";
-            break;
-        case "CupFlavor5":
-            txt1.innerHTML = "Raspberry Chocolate";
-            txt2.innerHTML = "Creme de framboesa no bolo de chocolate.";
-            txt3.innerHTML = "R$15,00";
-            break;
-        case "CupFlavor6":
-            txt1.innerHTML = "Chocolate Chocolate";
-            txt2.innerHTML = "Creme de chocolate no bolo de chocolate.";
-            txt3.innerHTML = "R$15,00";
-            break;
-        default:
-            txt1.innerHTML = "Cookies And Cream";
-            txt2.innerHTML = "Cookies And Cream"; txt1.innerHTML = "Delicioso cupkake.";
-            txt3.innerTML = "R$15,00";
+function openModal(lang) {
+    const languageData = {
+        Python: {
+            title: "PYTHON",
+            description: " Python é uma linguagem de programação versátil e fácil de ler, conhecida por sua simplicidade e legibilidade. É popular para desenvolvimento web, análise de dados e tarefas de automação."
+        },
+        JavaScript: {
+            title: "JAVASCRIPT",
+            description: "JavaScript é uma linguagem dinâmica e versátil usada principalmente para desenvolvimento web. Ele permite páginas da web interativas e é suportado por todos os principais navegadores da web."
+        }, 
+        Java: {
+            title: "JAVA",
+            description: "Java é uma linguagem amplamente utilizada, conhecida por sua portabilidade e segurança. É frequentemente usado em aplicativos empresariais e no desenvolvimento de aplicativos Android."
+        },
+        C: {
+            title: "C",
+            description: "C é uma linguagem fundamental que oferece controle de memória em baixo nível. É usado em sistemas operacionais, sistemas embarcados e no desenvolvimento de outras linguagens de programação."
+        },
+        "C#": {
+            title: "C#",
+            description: "C# é uma linguagem versátil desenvolvida pela Microsoft. É comumente usado no desenvolvimento de aplicativos para Windows, desenvolvimento de jogos (com Unity) e serviços web."
+        },
+        "C++": {
+            title: "C++",
+            description: "C++ é uma extensão de C que oferece recursos de programação orientada a objetos. É popular no desenvolvimento de jogos, programação de sistemas e aplicativos de alto desempenho."
+        },
+        Ruby: {
+            title: "RUBY",
+            description: "Ruby é conhecido por sua sintaxe elegante e facilidade de uso. É frequentemente usado no desenvolvimento web, especialmente com o framework Ruby on Rails."
+        },
+        PHP: {
+            title: "PHP",
+            description: "PHP é uma linguagem de script no lado do servidor que alimenta muitos sites dinâmicos. É amplamente utilizado no desenvolvimento web e pode ser incorporado em HTML."
+        },
+        Go: {
+            title: "GO (GOLANG)",
+            description: "Go é uma linguagem tipada estaticamente conhecida por sua simplicidade e eficiência. Foi projetada para programação de sistemas e serviços web."
+        },
+        Rust: {
+            title: "RUST",
+            description: "Rust é uma linguagem de programação de sistemas que enfatiza segurança e desempenho. É usada no desenvolvimento de software de alto desempenho em baixo nível."
+        },
+        TypeScript: {
+            title: "TYPESCRIPT",
+            description: "TypeScript é um superset do JavaScript que adiciona tipagem estática à linguagem. É frequentemente usado em aplicativos web de grande escala."
+        },
+        Swift: {
+            title: "SWIFT",
+            description: "Swift é uma linguagem desenvolvida pela Apple usada para o desenvolvimento de aplicativos iOS, macOS, watchOS e tvOS. É conhecida por sua velocidade e recursos de segurança."
+        },
+        Kotlin: {
+            title: "KOTLIN",
+            description: "Kotlin é uma linguagem moderna, tipada estaticamente, oficialmente suportada para o desenvolvimento de aplicativos Android. É concisa e interoperável com Java."
+        },
+        Dart: {
+            title: "DART",
+            description: "Dart é uma linguagem desenvolvida pelo Google, frequentemente usada com o framework Flutter para construir aplicativos móveis multiplataforma. Oferece um ciclo de desenvolvimento rápido."
+        }
+    };
+
+    const modal = document.getElementById("knowMore");
+
+    if (languageData[lang]) {
+        const data = languageData[lang];
+        document.getElementById("txt1").innerHTML = data.title;
+        document.getElementById("txt2").innerHTML = data.description;
+        document.getElementById("txt3").innerHTML = "";
+        modal.style.display = "inline-block";
+    } else {
+        document.getElementById("txt1").innerHTML = "UNKNOWN LANGUAGE";
+        document.getElementById("txt2").innerHTML = "This language is not in the list of supported languages.";
+        document.getElementById("txt3").innerHTML = "";
+        modal.style.display = "inline-block";
     }
-    document.getElementById("knowMore").style.display = "inline-block";
 }
+
 
 function closeModal() {
     document.getElementById("knowMore").style.display = 'none';
