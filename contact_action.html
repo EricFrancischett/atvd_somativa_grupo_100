@@ -10,43 +10,41 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <a href="index.html">Home</a>
-        <a href="news.html">News</a>
-        <a class="active" href="contact.html">Contact</a>
-        <a href="about.html">About</a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="contact.html">Contato</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script src="script/script.js"></script>
+    <div class="content">
+
+        <h2 class="titleTop">Dados de Contato</h2>
+
+        <p>JS lê os dados enviados via <b>GET</b> de um Form HTML</p>
+
+        <table class="tableCSS">
+            <tr>
+                <th>Chave</th>
+                <th>Valor</th>
+            </tr>
+            <script language=javascript>
+                var params = new Array();
+                params = getParameters();
+                for (let [key, value] of Object.entries(params)) {
+                    document.write("<tr><th>" + key + "</th><td>" + value + "</td></tr>");
+                }
+            </script>
+        </table>
+        <input type=button class="form-submit" value=" << Retornar" onclick="history.back()">
     </div>
-
-    <body>
-        <div class="sidebar">
-            <a href="index.html">Home</a>
-            <a href="news.html">News</a>
-            <a class="active" href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-        </div>
-
-        <script src="script/script.js"></script>
-        <div class="content">
-
-            <h2 class="titleTop">Dados de Contato</h2>
-
-            <p>JS lê os dados enviados via <b>GET</b> de um Form HTML</p>
-
-            <table class="tableCSS">
-                <tr>
-                    <th>Chave</th>
-                    <th>Valor</th>
-                </tr>
-                <script language=javascript>
-                    var params = new Array();
-                    params = getParameters();
-                    for (let [key, value] of Object.entries(params)) {
-                        document.write("<tr><th>" + key + "</th><td>" + value + "</td></tr>");
-                    }
-                </script>
-            </table>
-            <input type=button class="form-submit" value=" << Retornar" onclick="history.back()">
-    </body>
+    <footer>
+        &copy; 2023 todos os direitos reservados
+    </footer>
     <script src="script/script.js"></script>
 </body>
 
