@@ -10,57 +10,95 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <a class="active" href="index.html">Home</a>
-        <a href="news.html">News</a>
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="contact.html">Contato</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="content">
-        <h2 class="titleTop">Cupcake Backery Shop</h2>
-        <h3 class="titleBottom">Menu Tradicional</h3>
-
-        <div class="first">
+        <h2 class="titleHome">Principais Linguagens</h2>
+        <div class="tileListRow">
             <div class="menu">
-                <img class="imgStamp" src="img/CupFlavor1.png">
-                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('CupFlavor1');">
+                <img class="imgStamp" src="img/python_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('Python');">
             </div>
             <div class="menu">
-                <img class="imgStamp" src="img/CupFlavor2.png">
-                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('CupFlavor2');">
+                <img class="imgStamp" src="img/js_lang.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('JavaScript');">
             </div>
             <div class="menu">
-                <img class="imgStamp" src="img/CupFlavor3.png">
-                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('CupFlavor3');">
-            </div>
-        </div>
-        <div class="second">
-            <div class="menu">
-                <img class="imgStamp" src="img/CupFlavor4.png">
-                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('CupFlavor4');">
+                <img class="imgStamp" src="img/java_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('Java');">
             </div>
             <div class="menu">
-                <img class="imgStamp" src="img/CupFlavor5.png">
-                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('CupFlavor5');">
+                <img class="imgStamp" src="img/c_lang_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('C');">
             </div>
             <div class="menu">
-                <img class="imgStamp" src="img/CupFlavor6.png">
-                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('CupFlavor6');">
+                <img class="imgStamp" src="img/c_sharp_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('C#');">
+            </div>
+            <div class="menu">
+                <img class="imgStamp" src="img/c++_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('C++');">
+            </div>
+            <div class="menu">
+                <img class="imgStamp" src="img/ruby_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('Ruby');">
+            </div>
+            <div class="menu">
+                <img class="imgStamp" src="img/php_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('PHP');">
+            </div>
+            <div class="menu">
+                <img class="imgStamp" src="img/go_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('Go');">
+            </div>
+            <div class="menu">
+                <img class="imgStamp" src="img/rust_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('Rust');">
+            </div>
+            <div class="menu">
+                <img class="imgStamp" src="img/typeScript_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('TypeScript');">
+            </div>
+            <div class="menu">
+                <img class="imgStamp" src="img/scala_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('Scala');">
+            </div>
+            <div class="menu">
+                <img class="imgStamp" src="img/swift_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('Swift');">
+            </div>
+            <div class="menu">
+                <img class="imgStamp" src="img/kotlin_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('Kotlin');">
+            </div>
+            <div class="menu">
+                <img class="imgStamp" src="img/dart_img.png">
+                <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('Dart');">
             </div>
         </div>
     </div>
 
     <!-- Modal Detalhes -->
-    <div id="knowMore" class="modal">
+    <div id="knowMore" class="modal" style="display: none;">
         <header>
-            <span onclick="closeModal();" class="topright">X</span>
+            <span class="topright" onclick="closeModal()">X</span>
         </header>
         <div>
-            <p id="txt1" class="infoH"></p>
+            <p id="txt1" class="modalTitle"></p>
             <p id="txt2" class="info"></p>
             <p id="txt3" class="info"></p>
         </div>
     </div>
+    <footer>
+        &copy; 2023 todos os direitos reservados
+    </footer>
     <script src="script/script.js"></script>
 </body>
 

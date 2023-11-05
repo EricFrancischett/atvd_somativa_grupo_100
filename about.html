@@ -6,16 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="img.mufin.png">
-    <title>Meu Site Exemplo</title>
+    <title>Sobre</title>
 </head>
 
 <body>
-    <div class="sidebar">
-        <a href="index.html">Home</a>
-        <a href="news.html">News</a>
-        <a href="contact.html">Contact</a>
-        <a class="active" href="about.html">About</a>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contato</a></li>
+                <li><a class="active" href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="h1_about title">Sobre o Roadmap</h1>
+        <div class="card">
+            <p id="textoCartao">Esta aplicação foi desenvolvida para fins acadêmicos, durante a disciplina de
+                Fundamentos de Programação
+                Web, ofertada pela PUCPR no curso de Análise e Desenvolvimento de Sistemas. <br>
+                A página, além de oferecer um roteiro e guia que facilita a compreensão das linguagens de programação,
+                contempla tecnologias e aplicações em HTML, CSS, e Javacript.<br> O HTML foi usado para a estruturação
+                das
+                páginas, o CSS para estilização, e o Javascript para interatividade do conteúdo. Além disso, o
+                Javascript foi aplicado para validar e recuperar os dados de um formulário via método GET.
+            </p>
+        </div>
+        <div class="card">
+            <div>
+                <h3 id="titleAlunos" class="title">Alunos: </h3>
+                <ul>
+                    <li>Eric Mello Francischett</li>
+                    <li>Gabriel Xavier Delconti</li>
+                    <li>Rodolfo Kunzel</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2023 todos os direitos reservados
+    </footer>
     <script src="script/script.js"></script>
 </body>
 
