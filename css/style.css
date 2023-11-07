@@ -1,97 +1,88 @@
+/*---------General-----------*/
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #24252A;
+    font-family: "Montserrat", sans-serif;
+    color: #edf0f1;
 }
 
-/* --------------------Barra de navegação e footer -----------------------------------------------------*/
-
-header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 1px solid #e7e7e7;
-    background-color: #f3f3f3;
-    width: 100%;
-}
-
-header li {
-    float: left;
-}
-
-header li a {
-    display: block;
-    color: #666;
-    text-align: center;
-    padding: 14px 25px;
+li,
+a,
+button {
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
     text-decoration: none;
 }
 
-header li a:hover:not(.active) {
-    background-color: #ddd;
+/*---------Header-----------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
 }
 
-header li a.active {
-    color: white;
-    background-color: #033474;
+.logo {
+    cursor: pointer;
+    width: 120px;
+    height: auto;
 }
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #0088A9;
+}
+
+.nav__links li a.active {
+    color: #0088A9;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+/*---------Footer-----------*/
 
 footer {
-    color: #666;
     position: fixed;
     text-align: center;
-    background-color: #f3f3f3;
+    background-color: #0087a93c;
     bottom: 0;
     width: 100%;
     padding: 10px 0;
 }
 
-/* ----------------CONTEÚDO ABOUT---------------------------------------------------------------------------------------*/
 
-main {
-    max-width: 700px;
-    margin: auto;
-    padding: 0 40px;
-    margin-top: 30px;
-    color: rgb(29, 28, 28);
-}
-.h1_about {
-    text-align: center;
-}
+/*---------Index-----------*/
 
-#textoCartao {
-    color: rgb(29, 28, 28);
-    text-align: left;
-}
-
-.card {
-    /* border: 1px solid; */
-    padding: 20px 120px;
-    margin-top: 20px;
-    border-radius: 20px;
-    line-height: 23px;
-}
-
-.card:hover {
-    box-shadow: 8px 8px 15px 12px rgba(205, 205, 205, 0.25);
-}
-
-.title {
-    color: #033474;
-}
-
-#titleAlunos {
-    margin-bottom: 10px;
-}
-
-
-
-
-/* -------------------------------------------------------------------------------------------------------- */
 .content {
     size: relative;
-    background: #fff;
     position: relative;
     margin-left: 5%;
     margin-right: 5%;
@@ -100,16 +91,14 @@ main {
 
 .content .titleHome {
     color: white;
+    font-size: 50px;
     overflow: visible;
     position: relative;
     text-align: center;
     overflow-wrap: inherit;
     box-sizing: border-box;
     text-transform: uppercase;
-    margin: 16px;
-    padding: 8px;
-    border-radius: 10px;
-    background-color: rgba(158, 183, 209, 0.706);
+    padding: 50px;
 }
 
 .content .tileListRow {
@@ -152,87 +141,179 @@ main {
     padding: 16px;
 }
 
-.content .menuNews {
-    position: relative;
-    display: inline-block;
-    width: 30%;
-    margin: 8px;
-    border-radius: 10px;
-}
-
 .content .menu .imgStamp {
     display: block;
     position: center;
     width: 180px;
+    margin-bottom: 15px;
     height: 180px;
     border-radius: 10px;
-    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.3);
-}
-
-.content .menuNews .imgStampNews {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 40%;
-    border: 3px dotted crimson;
-
-}
-
-.overlay {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    bottom: 100%;
-    transition: .9s ease;
-    background-color: rgb(252, 244, 220);
-}
-
-.menuNews:hover .overlay {
-    bottom: 0;
-    height: 100%;
-}
-
-.textImg {
-    overflow: hidden;
-    color: crimson;
-    font-size: medium;
-    text-align: center;
-    position: absolute;
-    white-space: nowrap;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
 }
 
 .content .menu .modalButton {
-    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
     width: 180px;
-    font-size: 17px;
-    border-radius: 10px;
-    background-color: rgb(119, 164, 220);
-    box-shadow: 0 10px 10px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.content .menu .modalButton:hover {
+    background-color: rgba(0, 136, 169, 0.8);
 }
 
 .topright {
     color: #fff;
-    display: flex; 
+    display: flex;
     cursor: pointer;
     position: absolute;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     background-color: crimson;
-    top: 8px; 
+    top: 8px;
     right: 8px;
     width: 24px;
     height: 24px;
     border-radius: 10px;
-
 }
 
+/*---------About-----------*/
+
+#textoCartao {
+    text-align: justify;
+}
+
+.card {
+    padding: 20px 40px;
+    line-height: 23px;
+}
+
+.title {
+    color: #033474;
+}
+
+#titleAlunos {
+    margin-bottom: 10px;
+}
+
+
+/*---------Contact-----------*/
+
 .contact-form {
+    text-align: left;
+}
+
+.form-submit {
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.titleForm {
+    margin-bottom: 16px;
+}
+
+.form-submit:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+.form-group {
+    overflow: hidden;
+    position: relative;
+}
+
+label {
+    color: lightslategrey;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input:focus {
+    border-color: rgba(0, 136, 169, 1);
+}
+
+input:hover {
+    border-color: rgba(0, 136, 169, 0.8);
+}
+
+::placeholder {
+    font-size: medium;
+    color: rgb(166, 179, 196);
+}
+
+.label-agree-term {
+    position: relative;
+    top: 0%;
+}
+
+.agree-term {
+    width: auto;
+    display: inline-block;
+}
+
+.term-service {
+    color: rgba(0, 136, 169, 1)
+}
+
+input[type=checkbox]+label {
+    display: inline-block;
+    margin-top: 6px;
+    line-height: 1.5em;
+}
+
+table.tableCSS {
+    text-align: left;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 650px;
+    padding: 10px;
+}
+
+table.tableCSS td {
+    border: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #dbdbdb;
+}
+
+table.tableCSS th {
+    text-align: center;
+    background-color: #eaedf1;
+    height: 30px;
+    border-radius: 10px;
+    color: rgb(97, 112, 128);
+}
+
+/*---------Contact Action-----------*/
+
+/* .contact-form {
     text-align: left;
 }
 
@@ -243,7 +324,7 @@ main {
     border-bottom: none;
     display: inline-block;
     margin-top: 25px;
-    margin-left: 15px;
+    margin-bottom: 15px;
     margin-left: 25px;
     margin-right: 25px;
     padding: 15px 39px;
@@ -311,13 +392,6 @@ input[type=checkbox]+label {
     line-height: 1.5em;
 }
 
-p {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 0;
-    color: rgb(97, 112, 128);
-}
-
 table.tableCSS {
     text-align: left;
     font-size: medium;
@@ -342,4 +416,4 @@ table.tableCSS th {
     height: 30px;
     border-radius: 10px;
     color: rgb(97, 112, 128);
-}
+} */
