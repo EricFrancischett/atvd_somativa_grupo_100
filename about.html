@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="img.mufin.png">
     <title>Sobre</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
+        <img class="logo" src="img/logo.svg" alt="logo">
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contato</a></li>
+            <ul class="nav__links">
+                <li><a href="index.html">Início</a></li>
                 <li><a class="active" href="about.html">Sobre</a></li>
             </ul>
         </nav>
+        <a class="cta" href="contact.html"><button>Curso grátis aqui!</button></a>
     </header>
 
-    <main>
-        <h1 class="h1_about title">Sobre o Roadmap</h1>
+    <div class="content">
+        <h1 class="titleHome">Sobre o Roadmap</h1>
         <div class="card">
             <p id="textoCartao">Esta aplicação foi desenvolvida para fins acadêmicos, durante a disciplina de
                 Fundamentos de Programação
@@ -33,9 +34,9 @@
                 Javascript foi aplicado para validar e recuperar os dados de um formulário via método GET.
             </p>
         </div>
+        <h1 class="titleHome">Alunos</h1>
         <div class="card">
             <div>
-                <h3 id="titleAlunos" class="title">Alunos: </h3>
                 <ul>
                     <li>Eric Mello Francischett</li>
                     <li>Gabriel Xavier Delconti</li>
@@ -43,7 +44,7 @@
                 </ul>
             </div>
         </div>
-    </main>
+    </div>
 
     <footer>
         &copy; 2023 todos os direitos reservados
