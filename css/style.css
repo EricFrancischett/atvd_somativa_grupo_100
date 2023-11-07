@@ -101,6 +101,17 @@ footer {
     padding: 50px;
 }
 
+.content .subtitleHome {
+    color: white;
+    font-size: 30px;
+    overflow: visible;
+    position: relative;
+    text-align: center;
+    overflow-wrap: inherit;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+}
+
 .content .tileListRow {
     display: grid;
     justify-items: center;
@@ -202,6 +213,59 @@ footer {
     margin-bottom: 10px;
 }
 
+.list {
+    position: relative;
+    width: 400px;
+}
+
+.list h2 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.list ul {
+    position: relative;
+}
+
+.list ul li {
+    position: relative;
+    left: 0;
+    list-style: none;
+    margin: 20px;
+    border-left: 2px solid rgba(0, 136, 169, 1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.list ul li:hover {
+    left: 10px;
+}
+
+.list ul li span {
+    position: relative;
+    padding: 8px;
+    padding-left: 12px;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.list ul li:before {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 10%;
+    background: rgba(0, 136, 169, 1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s;
+}
+
+.list ul li:hover:before {
+    transform: scaleX(1);
+}
+
 
 /*---------Contact-----------*/
 
@@ -232,6 +296,20 @@ footer {
 .form-group {
     overflow: hidden;
     position: relative;
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    width: 100%;
+}
+
+.icon {
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    width: 40px;
+    height: auto;
+    min-width: 50px;
+    text-align: center;
 }
 
 label {
@@ -241,14 +319,15 @@ label {
 input {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid #fff;
     border-radius: 4px;
     background-color: transparent;
+    color-scheme: dark;
 }
 
-textarea:focus, input:focus{
+textarea:focus,
+input:focus {
     outline: none;
 }
 
@@ -268,6 +347,8 @@ input:hover {
 .label-agree-term {
     position: relative;
     top: 0%;
+    padding-left: 10px;
+    padding-bottom: 5px;
 }
 
 .agree-term {
@@ -285,135 +366,28 @@ input[type=checkbox]+label {
     line-height: 1.5em;
 }
 
-table.tableCSS {
-    text-align: left;
-    font-size: medium;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 650px;
-    padding: 10px;
-}
-
-table.tableCSS td {
-    border: 5px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #dbdbdb;
-}
-
-table.tableCSS th {
-    text-align: center;
-    background-color: #eaedf1;
-    height: 30px;
-    border-radius: 10px;
-    color: rgb(97, 112, 128);
-}
-
 /*---------Contact Action-----------*/
 
-/* .contact-form {
-    text-align: left;
-}
-
-.form-submit {
-    width: auto;
-    color: #fff;
-    cursor: pointer;
-    border-bottom: none;
-    display: inline-block;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    margin-left: 25px;
-    margin-right: 25px;
-    padding: 15px 39px;
-    border-radius: 5px;
-    -o-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    background: rgb(81, 92, 104);
-}
-
-.form-submit:hover {
-    background: rgb(129, 145, 161);
-}
-
-.form-group {
-    overflow: hidden;
-    position: relative;
-    display: inline-flex;
-    margin-left: 25px;
-    margin-bottom: 25px;
-}
-
-.form-group:last-child {
-    margin-bottom: 0
-}
-
-label {
-    color: lightslategrey;
-}
-
-input {
-    outline: none;
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    font-size: 17px;
-    padding: 6px 30px;
-    color: rgb(47, 55, 63);
-}
-
-::placeholder {
-    font-size: medium;
-    color: rgb(166, 179, 196);
-}
-
-.label-agree-term {
-    position: relative;
-    top: 0%;
-}
-
-.agree-term {
-    width: auto;
-    display: inline-block;
-}
-
-.term-service {
-    font-size: 13px;
-    color: #222
-}
-
-input[type=checkbox]+label {
-    display: inline-block;
-    margin-top: 6px;
-    line-height: 1.5em;
-}
-
 table.tableCSS {
+    width: 100%;
     text-align: left;
     font-size: medium;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 650px;
     padding: 10px;
+    margin-bottom: 50px;
 }
 
 table.tableCSS td {
     border: 5px;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #dbdbdb;
+    height: 30px;
+    border: 1px solid rgba(0, 136, 169, 1);
 }
 
 table.tableCSS th {
     text-align: center;
-    background-color: #eaedf1;
+    background-color: rgba(0, 136, 169, 1);
     height: 30px;
     border-radius: 10px;
-    color: rgb(97, 112, 128);
-} */
+}

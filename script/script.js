@@ -129,6 +129,8 @@ function getParameters() {
         for (var i = 0; i < params.length; i++) {
             var pairArray = params[i].split("="); // Retorna trechos da String separados por =
             if (pairArray.length == 2) {
+                pairArray[1] = pairArray[1].replaceAll('+', ' ')
+                pairArray[1] = pairArray[1].replaceAll('-', ' ')
                 paramsRet[pairArray[0]] = pairArray[1];
             }
 
