@@ -123,18 +123,20 @@ footer {
     top: 30%;
     left: 50%;
     width: 30%;
-    height: fit-content;
-    padding: 16px;
+    height: auto;
     min-width: 300px;
     border-radius: 10px;
+    border-width: 10px solid;
+    border: 10px solid;
     transform: translate(-50%, -30%);
-    background-color: rgb(158, 183, 209);
+    border-color: rgba(0, 136, 169, 1);
 }
 
 .modal .info {
     color: white;
     font-size: large;
     text-align: justify;
+    padding: 12px;
 }
 
 .modal .modalTitle {
@@ -143,7 +145,7 @@ footer {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    padding-bottom: 24px;
+    padding: 12px;
 }
 
 .content .menu {
